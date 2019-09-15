@@ -1,0 +1,13 @@
+/* pages/image/image.wxss */
+.imgbox {
+  background-color: #ccc;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+image{
+  display: block;
+  width: 200px;
+  height: 200px;
+}

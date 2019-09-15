@@ -1,0 +1,8 @@
+<!--pages/event/event.wxml-->
+<text>pages/event/event.wxml</text>
+
+<view class="wrap">
+  <view wx:for="{{list}}" bindtap="handleTap" class="nav1" data-title="{{item}}" wx:key="{{index}}">
+    {{item}}
+  </view>
+</view>

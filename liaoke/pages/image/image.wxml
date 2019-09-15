@@ -1,0 +1,17 @@
+<!--pages/image/image.wxml-->
+<text>pages/image/image.wxml</text>
+<button bindtap="handleTap">选择图片</button>
+
+<view class="imgbox">
+  <image 
+    src="{{imgSrc}}"
+    mode="aspectFit"
+  ></image>
+</view>
+
+<view class="imgbox">
+  <image 
+    src="{{imgSrc}}"
+    mode="aspectFill"
+  ></image>
+</view>

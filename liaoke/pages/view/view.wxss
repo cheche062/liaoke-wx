@@ -1,0 +1,25 @@
+/* pages/view/view.wxss */
+.box{
+  color: red;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.head{
+  background: purple;
+  height: 50px;
+}
+.content{
+  background: green;
+  flex: 1;
+}
+.foot{
+  background: orange;
+  height: 50px;
+}
+
+
+

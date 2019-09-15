@@ -1,0 +1,14 @@
+<!--pages/input/input.wxml-->
+<text>pages/input/input.wxml</text>
+<view class="inputlist">
+  <input value="哈哈哈" confirm-type="send"></input>
+  <input type="number"></input>
+  <input type="idcard"></input>
+  <input type="digit" 
+    bindfocus="handleFocus" 
+    bindblur="handleBlur"
+    bindinput="handleInput"
+  >
+
+  </input>
+</view>

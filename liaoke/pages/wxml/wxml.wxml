@@ -1,0 +1,15 @@
+<!--pages/wxml/wxml.wxml-->
+<text>pages/wxml/wxml.wxml</text>
+<include src="/wxml/header.wxml"/>
+
+<button bindtap="handleTap">切换</button>
+<view wx:if="{{isShow}}">哈哈</view>
+
+<view wx:for="{{movies}}" wx:key="{{i}}" wx:for-item="movie" wx:for-index="i">{{movie}} = {{i}}</view>
+
+<import src="/wxml/template.wxml" />
+
+<template is="t1" data="{{btn: '姓名', name: 'cheche'}}"/>
+<template is="t1" data="{{btn: '性别', name: '男'}}"/>
+
+<include src="/wxml/footer.wxml"/>

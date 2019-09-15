@@ -1,0 +1,22 @@
+/* pages/home/home.wxss */
+.header {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 50rpx;
+}
+.hover{
+  background: red;
+  color: white;
+}
+
+.title {
+  color: red;
+}
+
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}

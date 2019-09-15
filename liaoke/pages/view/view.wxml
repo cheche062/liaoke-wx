@@ -1,0 +1,6 @@
+<!--pages/view/view.wxml-->
+<view class="wrap">
+  <view class="head"></view>
+  <view class="content"></view>
+  <view class="foot"></view>
+</view>

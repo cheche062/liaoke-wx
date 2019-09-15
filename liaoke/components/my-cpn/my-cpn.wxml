@@ -1,0 +1,5 @@
+<!--components/my-cpn/my-cpn.wxml-->
+<text class="title titleclass">{{title}}</text>
+
+<view class="content">我是自定义组件的内容</view>
+<button bindtap="handleAdd">加1</button>

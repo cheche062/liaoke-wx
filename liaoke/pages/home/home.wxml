@@ -1,0 +1,23 @@
+<!--pages/home/home.wxml-->
+<include src="/wxml/header"/>
+<text selectable>Hello   {{name}}\n</text>
+<text space="ensp" selectable>Hello {{name}}\n</text>
+<text space="emsp" selectable>Hello {{name}}\n</text>
+<text space="nbsp" selectable>Hello {{name}}\n</text>
+
+<button open-type="share">share</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="bindgetphonenumber">getPhoneNumber</button>
+<button open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">getUserInfo</button>
+<button hover-class="hover">hover</button>
+
+<view>{{count}}</view>
+<my-cpn title="cheche" titleclass="red" bind:add="handleAdd"/>
+<!-- <my-cpn title="meihao" titleclass="blue"/> -->
+
+<w-tab-control  tabListData="{{titles}}" bind:onChangeTabItem="handleChangeTabItem"/>
+
+<my-slot>
+  <button slot="left" size="mini">按钮1</button>
+  <button slot="center" size="mini">按钮2</button>
+  <button slot="right" size="mini">按钮3</button>
+</my-slot>

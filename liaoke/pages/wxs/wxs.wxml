@@ -1,0 +1,14 @@
+<!--pages/wxs/wxs.wxml-->
+<text>pages/wxs/wxs.wxml</text>
+
+<!-- <wxs module="info">
+  module.exports = {
+    name: "cheche",
+    age: 18
+  }
+</wxs> -->
+<wxs src="./info.wxs" module="info1"></wxs>
+
+<view>
+  {{info1.name}} - {{info1.age}}
+</view>

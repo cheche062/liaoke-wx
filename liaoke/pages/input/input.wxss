@@ -1,0 +1,9 @@
+/* pages/input/input.wxss */
+.inputlist{
+  overflow: hidden
+}
+input {
+  border: 1px solid red;
+  margin: 10px 20px;
+  padding: 0 5px;
+}

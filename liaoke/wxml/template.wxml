@@ -1,0 +1,4 @@
+<template name="t1">
+  <button>{{btn}}</button>
+  <view>{{name}}</view>
+</template>

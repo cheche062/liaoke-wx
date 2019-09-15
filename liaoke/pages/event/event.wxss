@@ -1,0 +1,9 @@
+/* pages/event/event.wxss */
+.wrap {
+  display: flex;
+  text-align: center
+}
+.nav1 {
+  flex: 1;
+}
+
