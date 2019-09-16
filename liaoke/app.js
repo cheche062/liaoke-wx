@@ -1,10 +1,64 @@
+import request from "/service/network.js"
+
+const TOKEN = "token";
+
 App({
+  globalData: {
+    name: "cheche",
+    age: 900,
+    token: ""
+  },
+
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function (options) {
-    // console.log(options)
-    
+    const token = wx.getStorageSync(TOKEN);
+    if (token) {
+      this.checkToken(token);
+
+    } else {
+      this.login();
+    }
+  },
+
+  checkToken(token) {
+    console.log("校验token")
+    request({
+      url: "http://123.207.32.32:3000/auth",
+      method: "post",
+      header: {token}
+    }).then(res => {
+      if (!res.data.errCode) {
+        console.log("token 有效")
+        this.globalData.token = res.data.token;
+
+      } else {
+        console.log("token 过期")
+        this.login();
+      }
+    })
+  },
+
+  login() {
+    console.log("登陆")
+    wx.login({
+      success: (res) => {
+        const code = res.code;
+        request({
+          url: "http://123.207.32.32:3000/login",
+          method: "post",
+          data: { code }
+
+        }).then(res => {
+          console.log("登陆成功")
+          this.globalData.token = res.data.token
+          wx.setStorageSync(TOKEN, this.globalData.token);
+        }).catch(err => {
+          console.log("登陆出错")
+        })
+      }
+    })
   },
 
   /**
@@ -28,9 +82,6 @@ App({
    */
   onError: function (msg) {
     
-  },
-  globalData: {
-    name: "cheche",
-    age: 900
   }
+  
 })

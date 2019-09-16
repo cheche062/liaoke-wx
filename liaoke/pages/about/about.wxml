@@ -1,2 +1,13 @@
 <!--pages/about/about.wxml-->
 <text>pages/about/about.wxml</text>
+<button bindtap="handleTap">showToast</button>
+<button bindtap="handleModal">showModal</button>
+<button bindtap="handleActionSheet">showActionSheet</button>
+<button open-type="share">分享</button>
+
+{{title}}
+<navigator url="/pages/wxs/wxs?name=cheche&age=18">跳转(默认)</navigator>
+<navigator url="/pages/wxs/wxs" open-type="redirect">跳转(重定向)</navigator>
+<navigator url="/pages/home/home" open-type="switchTab">跳转(首页)</navigator>
+
+<button bindtap="handlePushTo">跳转</button>

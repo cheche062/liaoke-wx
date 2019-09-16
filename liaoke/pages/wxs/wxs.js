@@ -5,14 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    count: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      count: this.data.count + 1
+    })
 
+    console.log("wxs页面", options, this.data.count);
   },
 
   /**
@@ -33,14 +37,17 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log("wxs 页面 隐藏")
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    const pages = getCurrentPages();
+    const home = pages[pages.length - 2]
+    home.changeTitle()
+    console.log("wxs 页面 销毁")
   },
 
   /**

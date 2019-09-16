@@ -1,6 +1,7 @@
 // pages/home/home.js
-const app = getApp();
-// console.log(app)
+import request from "../../service/network.js";
+// const app = getApp();
+// console.log(request);
 
 
 Page({
@@ -18,7 +19,8 @@ Page({
     ],
     count: 0,
     titles: ['手套', '衣服', '鞋子'],
-    selectedIndex: 0
+    selectedIndex: 0,
+    recommendList: []
   },
 
   handleChangeTabItem(p) {
@@ -54,15 +56,15 @@ Page({
    */
   onLoad: function (options) {
     // console.log("home page", options)
-    wx.request({
-      url: 'http://123.207.32.32:8000/api/v1/recommend',
-      success: (res) => {
-        this.setData({
-          list: res.data.data.list
-        })
+    let url = "http://123.207.32.32:8000/api/v1/recommend";
 
-        // console.log("data::::", res)
-      }
+    request({
+      url
+    }).then(res => {
+      console.log("data::::", res)
+    }).catch(res => {
+      console.log("error::::", res)
+
     })
   },
   onPageScroll(obj) {

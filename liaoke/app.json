@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/about/about",
     "pages/event/event",
     "pages/wxs/wxs",
     "pages/wxml/wxml",
@@ -8,8 +9,7 @@
     "pages/scroll/scroll",
     "pages/view/view",
     "pages/input/input",
-    "pages/image/image",
-    "pages/about/about"
+    "pages/image/image"
   ],
   "window": {
     "backgroundTextStyle": "dark",

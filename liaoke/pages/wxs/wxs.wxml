@@ -12,3 +12,7 @@
 <view>
   {{info1.name}} - {{info1.age}}
 </view>
+
+
+<navigator open-type="navigateBack">返回</navigator>
+<navigator url="/pages/wxml/wxml">跳转</navigator>
